@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styles.css" media="screen">
+    <script src="java.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Breathe+Fire+III&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Janela de Status</title>
+</head>
+<body>
+    <div class="center">
+ <h1>
+   Projeto HORIZON
+   </h1>
+</div>
+    <div class="status-window">
+    <label for="imagem-personagem">
+    	<img src="https://i.pinimg.com/564x/1f/a4/28/1fa4280261a4a66b6f498c512dbb51a3.jpg" alt="Foto do Personagem" class="status-photo">
+    <input type="file" id="imagem-personagem" accept="image/*" class="status-input visually-hidden"
+onchange="updateImage(this)">
+    </label>
+
+        <h2 style="font-family: 'Breathe Fire III';">
+            <span contenteditable="true" spellcheck="false">Nome do Personagem</span>
+
+        </h2>
+         <label for="hp">HP:</label>
+        <input type="number" id="hp" class="status-input" value="" required >
+        <label for="yld">IDADE:</label>
+        <input type="number" id="yld" class="status-input" value="" required >
+        <label for="sanidade">SANIDADE:</label>
+        <input type="number" id="sanidade" class="status-input" value="" required >
+        <label for="profissao">PROFISSÃO:</label>
+        <input type="text" id="profissao" class="status-input" placeholder="Digite a profissão" required >
+		<button type="submit">SALVAR</button>
+    </div>
+
+<div class="attribute-window">
+    		<h2>Atributos</h2>
+			<label for="power">Força:</label>
+                		<input type="number" id="power" class="status-input" value="">
+			<label for="vigor">Vigor:</label>
+                		<input type="number" id="vigor" class="status-input" value="">
+                	<label for="destreza">Destreza:</label>
+    				<input type="number" id="destreza" class="status-input" value="">
+    			<label for="agilidade">Agilidade:</label>
+   				<input type="number" id="agilidade" class="status-input" value="">
+	        <label for="inteligencia">Inteligência:</label>
+   		<input type="number" id="inteligencia" class="status-input" value="">
+                <label for="percepção">Percepção:</label>
+   		<input type="number" id="percepção" class="status-input" value="">
+                <label for="carisma">Carisma:</label>
+   		<input type="number" id="carisma" class="status-input" value="">
+                <label for="sorte">Sorte:</label>
+   		<input type="number" id="sorte" class="status-input" value="">
+<!-- Adicione mais campos de entrada para outros status de combate -->
+</div>
+
+<div class="pericias-window">
+    		<h2>Perícias</h2>
+		
+		<li>	
+			<label for="item1">Adestramento: (Car)</label>
+				<input type="checkbox" id="item1">
+		</li>
+		<li>
+			<label for="item2">Ameaça: (For/Int)</label>
+				<input type="checkbox" id="item2">
+		</li>
+		<li>
+			<label for="item3">Arrombamento: (For/Dez)</label>
+				<input type="checkbox" id="item3">
+		</li>
+		<li>
+			<label for="item4">Armadilhas: (Int)</label>
+				<input type="checkbox" id="item4">
+		</li>
+		<li>
+			<label for="item5">Armas Brancas: (Dez)</label>
+				<input type="checkbox" id="item5">
+		</li>
+		<li>
+			<label for="item6">Armas de fogo: (Dez)</label>
+				<input type="checkbox" id="item6">
+		</li>
+		<li>
+			<label for="item7">Briga: (For)</label>
+				<input type="checkbox" id="item7">
+		</li>
+		<li>
+			<label for="item8">Barganha: (Car)</label>
+				<input type="checkbox" id="item8">
+		</li>
+		<li>
+			<label for="item9">Botânica: (Int)</label>
+				<input type="checkbox" id="item9">
+		</li>
+		<li>
+			<label for="item10">Computação: (Int)</label>
+				<input type="checkbox" id="item10">
+		</li>
+		<li>
+			<label for="item11">Corrida: (Vig/Agi)</label>
+				<input type="checkbox" id="item11">
+		</li>
+		<li>
+			<label for="item12">Culinaria: (Int)</label>
+				<input type="checkbox" id="item12">
+		</li>
+		<li>
+			<label for="item13">Construção: (Int/For)</label>
+				<input type="checkbox" id="item13">
+		</li>
+		<li>
+			<label for="item14">Direção: (Int)</label>
+				<input type="checkbox" id="item14">
+		</li>
+		<li>
+			<label for="item15">Pesca: (Dez)</label>
+				<input type="checkbox" id="item15">
+		</li>
+		<li>
+			<label for="item16">Explosivos: (Int)</label>
+				<input type="checkbox" id="item16">
+		</li>
+		<li>
+			<label for="item17">Esquiva: (Agi/Dez)</label>
+				<input type="checkbox" id="item17">
+		</li>
+		<li>
+			<label for="item18">Falsificação: (Int)</label>
+				<input type="checkbox" id="item18">
+		</li>
+		<li>
+			<label for="item19">Furtividade: (Agi/Dez)</label>
+				<input type="checkbox" id="item19">
+		</li>
+		<li>
+			<label for="item20">Furto: (Dez/Agi)</label>
+				<input type="checkbox" id="item20">
+		</li>
+		<li>
+			<label for="item21">Investigação:  (Int)</label>
+				<input type="checkbox" id="item21">
+		</li>
+		<li>
+			<label for="item22">Intimidação: (Car/For)</label>
+				<input type="checkbox" id="item22">
+		</li>
+		<li>
+			<label for="item23">Lábia: (Car)</label>
+				<input type="checkbox" id="item23">
+		</li>
+		<li>
+			<label for="item24">Leitura Labial: (Per)</label>
+				<input type="checkbox" id="item24">
+		</li>
+		<li>
+			<label for="item25">Mecânica: (Int/For)</label>
+				<input type="checkbox" id="item25">
+		</li>
+		<li>
+			<label for="item26">Medicina: (Int)</label>
+				<input type="checkbox" id="item26">
+		</li>
+		<li>
+			<label for="item27">Pesquisa: (Int)</label>
+				<input type="checkbox" id="item27">
+		</li>
+		<li>
+			<label for="item28">Persuasão: (Car)</label>
+				<input type="checkbox" id="item28">
+		</li>
+		<li>
+			<label for="item29">Rastreamento: (Per)</label>
+				<input type="checkbox" id="item29">
+		</li>
+		<li>
+			<label for="item30">Sobrevivência: (For) </label>
+				<input type="checkbox" id="item30">
+		</li>
+
+
+</div>
+
+</body>
+</html>

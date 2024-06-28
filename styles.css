@@ -1,0 +1,217 @@
+/* styles.css */
+
+/* Estilos para a página inteira */
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 100;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1{
+  text-align: center;
+  color:white;
+  font-family: Breathe Fire III;
+  text-transform:uppercase;
+}
+   
+
+/* Estilos para a janela de status */
+.status-window {
+    border: 2px solid #333;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    top: 423px;
+    background-image: url('https://i.pinimg.com/originals/4d/e4/f4/4de4f43d2921e0e16edb78a7e0b2800f.gif');
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+
+.status-photo {
+    position: absolute;
+    left: -2px;
+    top: -345px;
+    width: 344px;
+    height: 344px;
+    margin-bottom: 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.status-input {
+    width: auto;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Breathe Fire III;
+    
+    
+}
+
+
+/* Cores específicas para os atributos */
+#hp {
+    background: linear-gradient(0deg, rgba(255,1,1,1) 0%, rgba(21,140,12,1) 100%); /* Verde para HP */
+}
+
+#yld {
+    background: linear-gradient(0deg, rgba(255,1,1,1) 0%, rgba(21,140,12,1) 100%); /* Azul para MP */
+}
+
+#power {
+    background-color: #A9A9A9;
+}
+
+
+#destreza {
+    background-color: #A9A9A9;
+}
+
+#sanidade {
+    background: linear-gradient(0deg, rgba(255,1,1,1) 0%, rgba(21,140,12,1) 100%); /* Cinza para Constituição */
+}
+
+#vigor {
+    background-color: #A9A9A9;
+}
+
+#agilidade {
+    background-color: #A9A9A9;
+}
+
+#inteligencia {
+    background-color: #A9A9A9;
+}
+
+#percepção {
+    background-color: #A9A9A9;
+}
+
+#carisma {
+    background-color: #A9A9A9;
+}
+
+#sorte {
+    background-color: #A9A9A9;
+}
+
+
+#profissao {
+    background: linear-gradient(0deg, rgba(255,1,1,1) 0%, rgba(21,140,12,1) 100%); /* Branco para Profissão (texto) */
+    color: #fff; /* Texto preto na caixa de texto */
+}
+
+
+.attribute-window {
+    background-image: url('https://i.pinimg.com/originals/4d/e4/f4/4de4f43d2921e0e16edb78a7e0b2800f.gif');
+    color: #FFFFFF;
+    padding: 1px;
+    border: 1px solid #666;
+    width: 237px; /* Ajuste conforme necessário */
+    margin-left: 22px; /* Espaçamento entre as janelas */
+    position: absolute;
+    top: 79px;
+    left: 400px;
+    text-align: center
+    
+}
+
+.pericias-window {
+ 	background-image: url('https://i.pinimg.com/originals/4d/e4/f4/4de4f43d2921e0e16edb78a7e0b2800f.gif');
+    	color: #FFFFFF;
+  	padding: 1px;
+  	border: 1px solid #666;
+  	width: 200px; /* Ajuste conforme necessário */
+   	margin-left: 22px; /* Espaçamento entre as janelas */
+   	position: absolute;
+   	top: 80px;
+   	right: 80px;
+   	text-align: center;
+	font-family: Breathe Fire III;
+	font-size: 20px;
+    
+}
+
+li {
+    display: flex;
+    justify-content: flex-end; /* Alinhamento à direita */
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+input[type="checkbox"] {
+    margin-left: 10px; /* Espaçamento entre o rótulo e o quadrado */
+}
+
+/* Estilos para telas menores (até 600px) */
+@media screen and (max-width: 600px) {
+  /* Ajuste o tamanho da fonte, margens, etc. */
+  .element {
+    font-size: 16px;
+    margin: 10px;
+  }
+}
+
+/* Estilos para telas maiores (acima de 600px) */
+@media screen and (min-width: 601px) {
+  /* Outros estilos para telas maiores */
+  .element {
+    font-size: 18px;
+    margin: 20px;
+  }
+}
